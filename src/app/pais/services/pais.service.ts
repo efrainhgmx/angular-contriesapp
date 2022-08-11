@@ -21,5 +21,10 @@ export class PaisService {
     const url = `${this.apiUrl}/capital/${termino}`;
     return this.http.get<Country[]>(url);
   }
+
+  paisPorCodigo( id: string ):Observable<Country> {
+    const url = `${this.apiUrl}/alpha/${id}`;
+    return this.http.get<Country>(url);
+  }
   
 }
